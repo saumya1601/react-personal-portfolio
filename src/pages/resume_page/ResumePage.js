@@ -1,24 +1,9 @@
 import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { AiOutlineDownload } from "react-icons/ai";
 import Particle from "../../Particle";
-import pdf from "../../assets/MD_MAFUJUL_HASAN.pdf";
-import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Importing framer-motion
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-const resumeLink =
-  "https://raw.githubusercontent.com/MD-MAFUJUL-HASAN/Personal-Portfolio/main/src/assets/MD_MAFUJUL_HASAN.pdf";
+import React from "react";
+import { motion } from "framer-motion";
 
 function Resume() {
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-
   return (
     <div>
       <section className="home-section">
@@ -27,7 +12,6 @@ function Resume() {
           <Container className="home-content">
             <div
               className="d-flex justify-content-center"
-              width="100%"
               style={{ backgroundColor: "#fbd9ad" }}
             >
               <motion.h1
@@ -39,24 +23,30 @@ function Resume() {
                 RESUME
               </motion.h1>
             </div>
-            <div fluid className="certificate-section" id="about">
-              <div className="d-flex justify-content-center mt-4">
-                <Button variant="primary" href={pdf} target="_blank">
-                  <AiOutlineDownload />
-                  &nbsp;Download Resume
-                </Button>
-              </div>
-              <div className="resume d-flex justify-content-center">
-                <Document file={resumeLink}>
-                  <Page pageNumber={1} scale={width > 786 ? 1.6 : 0.4} />
-                </Document>
-              </div>
-              <div className="d-flex justify-content-center">
-                <Button variant="primary" href={pdf} target="_blank">
-                  <AiOutlineDownload />
-                  &nbsp;Download Resume
-                </Button>
-              </div>
+            {/* Resume Image */}
+            <div className="resume d-flex justify-content-center mt-4">
+              <img
+                src="/Saumya-Modi-cv.png"
+                alt="Resume"
+                style={{
+                  width: "100%",
+                  maxWidth: "600px",
+                  borderRadius: "10px",
+                  boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
+                }}
+              />
+            </div>
+
+            {/* Download Button */}
+            <div className="d-flex justify-content-center mt-4">
+              <a
+                href="/Saumya-Modi-cv.pdf" // Link to your resume PDF
+                download
+                className="btn btn-primary"
+                style={{ fontSize: "16px", padding: "10px 20px", borderRadius: "5px" }}
+              >
+                Download Resume
+              </a>
             </div>
           </Container>
         </Container>
