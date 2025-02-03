@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import Particle from "../../Particle";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // Importing motion for animation
 
 function Resume() {
   return (
@@ -10,21 +10,25 @@ function Resume() {
         <Container fluid id="home">
           <Particle />
           <Container className="home-content">
-            <div
+            {/* Adding motion effect to the title */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }} // Initial state (hidden and scaled down)
+              animate={{ opacity: 1, scale: 1 }} // Final state (visible and normal size)
+              transition={{ duration: 0.5 }} // Duration of the animation
               className="d-flex justify-content-center"
               style={{ backgroundColor: "#fbd9ad" }}
             >
-              <motion.h1
-                style={{ color: "rgb(134 61 176)" }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                RESUME
-              </motion.h1>
-            </div>
-            {/* Resume Image */}
-            <div className="resume d-flex justify-content-center mt-4">
+              <h1 style={{ color: "rgb(134 61 176)" }}>RESUME</h1>
+            </motion.div>
+
+            {/* Resume Image with motion effect */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }} // Starting with opacity 0 and slight offset (y-axis)
+              whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and default position
+              viewport={{ once: true }} // Trigger animation only once when in view
+              transition={{ duration: 0.5 }} // Duration of the animation
+              className="resume d-flex justify-content-center mt-4"
+            >
               <img
                 src="/Saumya-Modi-cv.png"
                 alt="Resume"
@@ -35,19 +39,7 @@ function Resume() {
                   boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
                 }}
               />
-            </div>
-
-            {/* Download Button */}
-            <div className="d-flex justify-content-center mt-4">
-              <a
-                href="/Saumya-Modi-cv.pdf" // Link to your resume PDF
-                download
-                className="btn btn-primary"
-                style={{ fontSize: "16px", padding: "10px 20px", borderRadius: "5px" }}
-              >
-                Download Resume
-              </a>
-            </div>
+            </motion.div>
           </Container>
         </Container>
       </section>

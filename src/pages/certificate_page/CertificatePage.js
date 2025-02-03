@@ -1,20 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { motion } from "framer-motion";
 import ucsc from "../../images/ucsc.png";
 import ufm from "../../images/ufm.png";
 import cbta from "../../images/CBT&A.pdf";
 import Particle from "../../Particle";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-const zoomIn = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
-};
+import { motion } from "framer-motion"; // Importing motion for animation
 
 // Certificate data
 const certificates = [
@@ -40,29 +30,33 @@ const certificates = [
 
 const CertificateCard = ({ certificate }) => (
   <Col md={4}>
-    <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-      <div className="cert-card">
-        <div className="content">
-          <a href={certificate.link} target="_blank" rel="noopener noreferrer">
-            <div className="content-overlay"></div>
-            <div className="cert-header" style={{ backgroundColor: "white" }}>
-              <img className="logo_img" src={certificate.logo} alt={certificate.title} />
-            </div>
-            <div className="content-details fadeIn-top">
-              <h3 className="content-title" style={{ color: "black" }}>
-                Certificate
-              </h3>
-            </div>
-          </a>
-        </div>
-        <div className="cert-body">
-          <h2 className="cert-body-title" style={{ fontWeight: 700, color: "#fbd9ad" }}>
-            {certificate.title}
-          </h2>
-          <h3 className="cert-body-subtitle" style={{ color: "#eb90ff", marginBottom: "0px" }}>
-            - {certificate.organization}
-          </h3>
-        </div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }} // Initial state (hidden and offset on the y-axis)
+      whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and normal position when in view
+      viewport={{ once: true }} // Trigger animation only once when in view
+      transition={{ duration: 0.5 }} // Duration of the animation
+      className="cert-card"
+    >
+      <div className="content">
+        <a href={certificate.link} target="_blank" rel="noopener noreferrer">
+          <div className="content-overlay"></div>
+          <div className="cert-header" style={{ backgroundColor: "white" }}>
+            <img className="logo_img" src={certificate.logo} alt={certificate.title} />
+          </div>
+          <div className="content-details fadeIn-top">
+            <h3 className="content-title" style={{ color: "black" }}>
+              Certificate
+            </h3>
+          </div>
+        </a>
+      </div>
+      <div className="cert-body">
+        <h2 className="cert-body-title" style={{ fontWeight: 700, color: "#fbd9ad" }}>
+          {certificate.title}
+        </h2>
+        <h3 className="cert-body-subtitle" style={{ color: "#eb90ff", marginBottom: "0px" }}>
+          - {certificate.organization}
+        </h3>
       </div>
     </motion.div>
   </Col>
@@ -74,11 +68,17 @@ export default function CertificatePage() {
       <Container fluid id="home">
         <Particle />
         <Container className="home-content">
-          <div className="d-flex justify-content-center" width="100%" style={{ backgroundColor: "#fbd9ad" }}>
-            <motion.div initial="hidden" animate="visible" variants={zoomIn}>
-              <h1 style={{ color: "rgb(134 61 176" }}>Certificates</h1>
-            </motion.div>
-          </div>
+          {/* Adding motion effect to the title */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }} // Initial state (hidden and scaled down)
+            animate={{ opacity: 1, scale: 1 }} // Final state (visible and normal size)
+            transition={{ duration: 0.5 }} // Duration of the animation
+            className="d-flex justify-content-center"
+            style={{ backgroundColor: "#fbd9ad" }}
+          >
+            <h1 style={{ color: "rgb(134 61 176)" }}>Certificates</h1>
+          </motion.div>
+
           <Container fluid className="certificate-section" id="about">
             <Container>
               <Row>
