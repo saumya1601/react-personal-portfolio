@@ -1,10 +1,30 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 import ucsc from "../../images/ucsc.png";
 
+const certifications = [
+  {
+    title: "MERN Stack Development",
+    subtitle: "- HackerRank",
+   
+    delay: 0.2,
+  },
+  {
+    title: "Full Stack Development",
+    subtitle: "- Udemy",
+   
+    delay: 0.6,
+  },
+  {
+    title: "Road Map to Full Stack Web Development",
+    subtitle: "- Coursera",
+   
+    delay: 0.6,
+  },
+];
 
 export default function Certification() {
   return (
@@ -27,103 +47,63 @@ export default function Certification() {
             </Col>
             <Col ms={12} className="mt-3">
               <Row className="g-5">
-                <Col md={4}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                  >
-                    <div className="cert-card">
-                      <div className="content">
-                        <a
-                          href="https://www.hackerrank.com/certificates/3573ea1a35bb"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="content-overlay"></div>
-                          <div
-                            className="cert-header"
-                            style={{ backgroundColor: "white" }}
+                {certifications.map((cert, index) => (
+                  <Col md={4} key={index}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 1, delay: cert.delay }}
+                    >
+                      <div className="cert-card">
+                        <div className="content">
+                          <a
+                            href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
-                            <img className="logo_img" src={ucsc} alt={ucsc} />
-                          </div>
-                          <div className="content-details fadeIn-top">
-                            <h3 className="content-title" style={{ color: "black" }}>
-                              Certificate
-                            </h3>
-                          </div>
-                        </a>
-                      </div>
-                      <div className="cert-body">
-                        <h2
-                          className="cert-body-title"
-                          style={{ fontWeight: 700, color: "#fbd9ad" }}
-                        >
-                          Problem Solving Basic : Programming Fundamentals
-                        </h2>
-                        <h3
-                          className="cert-body-subtitle"
-                          style={{ color: "#eb90ff", marginBottom: "0px" }}
-                        >
-                          - HackerRank
-                        </h3>
-                      </div>
-                    </div>
-                  </motion.div>
-                </Col>
-
-                <Col md={4}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.6 }}
-                  >
-                    <div className="cert-card">
-                      <div className="content">
-                        <a
-                          href="https://www.hackerrank.com/certificates/af66a6615aad"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="content-overlay"></div>
-                          <div
-                            className="cert-header"
-                            style={{ backgroundColor: "white" }}
+                            <div className="content-overlay"></div>
+                            <div
+                              className="cert-header"
+                              style={{ backgroundColor: "white" }}
+                            >
+                              <img className="logo_img" src={ucsc} alt="cert-logo" />
+                            </div>
+                            <div className="content-details fadeIn-top">
+                              <h3
+                                className="content-title"
+                                style={{ color: "black" }}
+                              >
+                                Certificate
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+                        <div className="cert-body">
+                          <h2
+                            className="cert-body-title"
+                            style={{ fontWeight: 700, color: "#fbd9ad" }}
                           >
-                            <img className="logo_img" src={ucsc} alt={ucsc} />
-                          </div>
-                          <div className="content-details fadeIn-top">
-                            <h3 className="content-title" style={{ color: "black" }}>
-                              Certificate
-                            </h3>
-                          </div>
-                        </a>
+                            {cert.title}
+                          </h2>
+                          <h3
+                            className="cert-body-subtitle"
+                            style={{ color: "#eb90ff", marginBottom: "0px" }}
+                          >
+                            {cert.subtitle}
+                          </h3>
+                        </div>
                       </div>
-                      <div className="cert-body">
-                        <h2
-                          className="cert-body-title"
-                          style={{ fontWeight: 700, color: "#fbd9ad" }}
-                        >
-                          Python Basic for : Programming Fundamentals
-                        </h2>
-                        <h3
-                          className="cert-body-subtitle"
-                          style={{ color: "#eb90ff", marginBottom: "0px" }}
-                        >
-                          - HackerRank
-                        </h3>
-                      </div>
-                    </div>
-                  </motion.div>
-                </Col>
+                    </motion.div>
+                  </Col>
+                ))}
               </Row>
             </Col>
           </Row>
+
           <div className="blog--viewAll">
             <Link to="/certificatepage">
               <button className="btn btn-primary">
-                View All
-                <HiArrowRight className="viewArr" />
+                View All <HiArrowRight className="viewArr" />
               </button>
             </Link>
           </div>

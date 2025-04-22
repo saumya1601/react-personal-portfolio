@@ -9,16 +9,22 @@ import { motion } from "framer-motion"; // Importing motion for animation
 // Certificate data
 const certificates = [
   {
-    title: "Problem Solving Basic : Programming Fundamentals",
+    title: "MERN Stack Development",
     organization: "HackerRank",
-    link: "https://www.hackerrank.com/certificates/3573ea1a35bb",
+
     logo: ucsc,
   },
 
   {
-    title: "Python Basic : Programming Fundamentals",
-    organization: "HackerRank",
-    link: "https://www.hackerrank.com/certificates/af66a6615aad",
+    title: "Full Stack Development",
+    organization: "Udemy",
+
+    logo: ucsc,
+  },
+  {
+    title: "Road Map to Full Stack Web Development",
+    organization: "Coursera",
+
     logo: ucsc,
   },
 ];

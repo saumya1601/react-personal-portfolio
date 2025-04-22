@@ -6,32 +6,17 @@ import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 
 // Project images
-import nyc from "../../images/nyc.png";
-import ci from "../../images/onboarding.png";
+
 import pp from "../../images/portfolio.png";
 
 
 export default function Projects() {
   const projects = [
-    {
-      title: "New Year CountDown",
-      image: nyc,
-      link: "https://github.com/MD-MAFUJUL-HASAN/Web_Programming/tree/main/New-Year-Countdown",
-      description: "The New Year Countdown Project is more than just a celebration; it's a testament to the human spirit and our shared aspirations for a brighter future. So, mark your calendars and get ready to be part of this global extravaganza as we count down to a new year filled with endless possibilities.",
-      technologies: "HTML, CSS, JavaScript",
-    },
 
-    {
-      title: "Online Payroll Management System",
-      image: ci,
-      link: "https://github.com/MD-MAFUJUL-HASAN/Online-Payroll-Management-System",
-      description: "A Payroll management System with features like generating payslips & reports. It manages salaries, leaves, branches, employees, designations, shifts, holidays, and employee attendance. It has a chat application for internal employee use.",
-      technologies: "CSS, JavaScript, PHP, SCSS",
-    },
     {
       title: "Personal Portfolio",
       image: pp,
-      link: "https://github.com/MD-MAFUJUL-HASAN/Personal-Portfolio",
+      link: "https://github.com/saumya1601/react-personal-portfolio",
       description: "Welcome to my personal portfolio. Explore my work, skills, and achievements in a concise and visually appealing format. Get a glimpse of my expertise and creativity.",
       technologies: "HTML, CSS, SCSS, React, JavaScript",
     },
