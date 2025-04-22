@@ -97,11 +97,13 @@ export default function Home() {
                       src="./profile1.png"
                       alt="Profile pic"
                       className="img-fluid"
+                      style={{ borderRadius: '20px' }} // Add this line
                     />
                   </motion.div>
                 </Tilt>
               </div>
             </Col>
+
           </Row>
         </Container>
       </Container>

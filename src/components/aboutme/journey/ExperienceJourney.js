@@ -28,7 +28,6 @@ const experienceData = [
     contentStyle: { background: "rgb(78 22 112)", color: "#fbd9ad" },
     contentArrowStyle: { borderLeft: "7px solid  rgb(78 22 112)" },
   },
-  
   {
     title: "Teksun Microsys Pvt. Ltd",
     subtitle: "Full Stack Developer Intern",
