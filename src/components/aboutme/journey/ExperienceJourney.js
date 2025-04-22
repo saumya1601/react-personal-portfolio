@@ -10,6 +10,26 @@ import StarIcon from "@mui/icons-material/Star";
 
 const experienceData = [
   {
+    title: "Soft Coding Solutions",
+    subtitle: "Full Stack Developer",
+    date: "10-02-2025 - Present",
+    description: [
+      "Developed web applications using the MERN stack (MongoDB, Express, React, Node.js).",
+      "Collaborated with the front-end and back-end teams to deliver scalable solutions.",
+      "Worked on optimizing code performance and improving application efficiency.",
+      "Engaged in code reviews and debugging of existing features.",
+      "Assisted in database management using MongoDB and PostgreSQL.",
+      "Implemented RESTful APIs for the front-end and back-end integration.",
+      "Resolved client-reported bugs efficiently to ensure a smooth user experience.",
+      "Contributed to product development and feature enhancements for internal tools.",
+      "Worked on the BizConnect platform, implementing core modules and improving UI/UX.",
+    ],
+    icon: <PersonIcon />,
+    contentStyle: { background: "rgb(78 22 112)", color: "#fbd9ad" },
+    contentArrowStyle: { borderLeft: "7px solid  rgb(78 22 112)" },
+  },
+  
+  {
     title: "Teksun Microsys Pvt. Ltd",
     subtitle: "Full Stack Developer Intern",
     date: "09-09-2024 - 25-01-2025",
