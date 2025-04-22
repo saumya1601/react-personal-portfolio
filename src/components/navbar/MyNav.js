@@ -48,10 +48,16 @@ export default function MyNav() {
       label: "Certifications",
     },
     {
-      path: "/blogs",
+      path: "/contact",
       icon: <FaBlog style={{ marginBottom: "2px" }} />,
-      label: "Blogs",
+      label: "Contact Me",
     },
+
+    // {
+    //   path: "/blogs",
+    //   icon: <FaBlog style={{ marginBottom: "2px" }} />,
+    //   label: "Blogs",
+    // },
   ];
 
   return (

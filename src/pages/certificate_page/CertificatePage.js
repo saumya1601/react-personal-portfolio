@@ -14,12 +14,7 @@ const certificates = [
     link: "https://www.hackerrank.com/certificates/3573ea1a35bb",
     logo: ucsc,
   },
-  {
-    title: "Basic Computer Application : IT Support Technician level-1",
-    organization: "Bangladesh Technical Education Board",
-    link: cbta,
-    logo: ufm,
-  },
+
   {
     title: "Python Basic : Programming Fundamentals",
     organization: "HackerRank",

@@ -9,7 +9,7 @@ import { HiArrowRight } from "react-icons/hi";
 import nyc from "../../images/nyc.png";
 import ci from "../../images/onboarding.png";
 import pp from "../../images/portfolio.png";
-import age from "../../images/age.png";
+
 
 export default function Projects() {
   const projects = [
@@ -35,13 +35,7 @@ export default function Projects() {
       description: "Welcome to my personal portfolio. Explore my work, skills, and achievements in a concise and visually appealing format. Get a glimpse of my expertise and creativity.",
       technologies: "HTML, CSS, SCSS, React, JavaScript",
     },
-    {
-      title: "Age Calculator",
-      image: age,
-      link: "https://github.com/MD-MAFUJUL-HASAN/Web_Programming/tree/main/Age-Calculator",
-      description: "Create an Age Calculator project using HTML, CSS, and JavaScript. Input your birthdate, and the tool instantly calculates your current age. The sleek design and user-friendly interface make age determination quick and hassle-free. Perfect for websites, apps, or personal use.",
-      technologies: "HTML, CSS, JavaScript"
-    },
+
 
   ];
 
@@ -61,7 +55,7 @@ export default function Projects() {
               </motion.h1>
             </Col>
             {projects.map((project, index) => (
-              <Col key={index} md={3}>
+              <Col key={index} md={4}>
                 <motion.div
                   key={index}
                   className="singleProject"

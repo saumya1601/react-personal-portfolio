@@ -4,8 +4,7 @@ import { motion } from "framer-motion"; // Import motion from framer-motion
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 import ucsc from "../../images/ucsc.png";
-import ufm from "../../images/ufm.png";
-import cbta from "../../images/CBT&A.pdf";
+
 
 export default function Certification() {
   return (
@@ -72,51 +71,7 @@ export default function Certification() {
                     </div>
                   </motion.div>
                 </Col>
-                <Col md={4}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.4 }}
-                  >
-                    <div className="cert-card">
-                      <div className="content">
-                        <a
-                          href={cbta}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="content-overlay"></div>
-                          <div
-                            className="cert-header"
-                            style={{ backgroundColor: "white" }}
-                          >
-                            <img className="logo_img" src={ufm} alt={ufm} />
-                          </div>
-                          <div className="content-details fadeIn-top">
-                            <h3 className="content-title" style={{ color: "black" }}>
-                              Certificate
-                            </h3>
-                          </div>
-                        </a>
-                      </div>
-                      <div className="cert-body">
-                        <h2
-                          className="cert-body-title"
-                          style={{ fontWeight: 700, color: "#fbd9ad" }}
-                        >
-                          Basic Computer Application for Everyone: IT Support
-                          Technician level-1
-                        </h2>
-                        <h3
-                          className="cert-body-subtitle"
-                          style={{ color: "#eb90ff", marginBottom: "0px" }}
-                        >
-                          - Bangladesh Technical Education Board
-                        </h3>
-                      </div>
-                    </div>
-                  </motion.div>
-                </Col>
+
                 <Col md={4}>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}

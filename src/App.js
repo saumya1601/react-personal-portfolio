@@ -1,7 +1,6 @@
 
 import './App.css';
 import "./style.css";
-
 import "react-vertical-timeline-component/style.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -23,10 +22,9 @@ import Notfound from "./pages/blogs_page/notfound";
 import TechnicalJourney from "./components/aboutme/journey/TechnicalJourney";
 import ProjectJourney from "./components/aboutme/journey/ProjectJourney";
 import SocialMedia from "./components/aboutme/social_media/SocialMedia";
-
 import Toolkit from "./components/aboutme/skills/Toolkit";
-
 import Footer from "./components/footer/Footer";
+import ContactPage from './pages/contact_page/contactPage';
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -44,10 +42,7 @@ function App() {
 
     <BrowserRouter>
       <Preloader load={load} />
-
-
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-
         <MyNav />
         <Routes>
           <Route path="/" element={<Home />}>
@@ -72,13 +67,11 @@ function App() {
           <Route path="/certificatepage" element={<CertificatePage />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/blogs" element={<ComingSoon />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Notfound />} />
-
         </Routes>
-
         <Footer />
       </div>
-
     </BrowserRouter>
   );
 }

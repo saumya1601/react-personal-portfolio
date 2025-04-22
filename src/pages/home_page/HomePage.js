@@ -9,7 +9,7 @@ import { FaLinkedinIn, FaFacebookF, FaGoogle } from "react-icons/fa";
 import Certification from "../../components/certificate/Certification";
 import Projects from "../../components/projects/Projects";
 import Contactus from "../../components/contactus/Contactus";
-import { motion } from "framer-motion"; // Importing framer-motion
+import { motion } from "framer-motion";
 
 export default function Home() {
   const socialLinks = [
