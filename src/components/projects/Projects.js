@@ -4,10 +4,11 @@ import { motion } from "framer-motion"; // Import motion from framer-motion
 import { FaCode } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
-
-// Project images
-
 import pp from "../../images/portfolio.png";
+import buildingProImage from "../../images/BuildingPro.png";
+import cinemaProImage from "../../images/CinemaPro.png";
+import lokManyaImage from "../../images/LokManya.png";
+import harvestAndCoImage from "../../images/harvestandco.png";
 
 
 export default function Projects() {
@@ -20,15 +21,41 @@ export default function Projects() {
       description: "Welcome to my personal portfolio. Explore my work, skills, and achievements in a concise and visually appealing format. Get a glimpse of my expertise and creativity.",
       technologies: "HTML, CSS, SCSS, React, JavaScript",
     },
-
-
+    {
+      title: "Building Pro",
+      image: buildingProImage,
+      link: "https://buildingpro.in/",
+      description: "A full-stack platform simplifying commercial space management. Connects admins, owners, and visitors with multi-role access, rental/sale workflows, real-time inquiries, billing, and ad management for efficient operations.",
+      technologies: "React.js, MUI, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, AWS, Socket.io, JWT, Google OAuth, Cloudinary, Kafka, Redis, Razorpay",
+    },
+    {
+      title: "Cinemapro",
+      image: cinemaProImage,
+      link: "https://github.com/saumya1601/react-personal-portfolio",
+      description: "A comprehensive platform for the cinema and film industry, providing robust project management, a dynamic vendor marketplace with billing, user/profile management, and job postings for seamless industry collaboration.",
+      technologies: "React.js, Node.js, Express.js, MongoDB, AWS, Socket.io",
+    },
+    {
+      title: "Lokmanya",
+      image: lokManyaImage,
+      link: "https://www.lokmanya.ac.in/",
+      description: "A college website providing information about courses, admissions, faculty, and campus life, designed for prospective and current students, and academic staff.",
+      technologies: "HTML, CSS, JavaScript, React.js",
+    },
+    {
+      title: "Harvest & Co.",
+      image: harvestAndCoImage,
+      link: "https://www.harvestandco.in/",
+      description: "An e-commerce platform for raw herbal products, featuring product listings, secure payment gateways, user accounts, and order management, promoting natural and organic goods.",
+      technologies: "HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB",
+    },
   ];
 
   return (
     <div>
       <Container fluid className="certificate-section" id="about">
         <Container>
-          <Row>
+          <Row className="g-5">
             <Col md={12} className="certificate-description d-flex justify-content-start">
               <motion.h1
                 className="aboutme-heading"

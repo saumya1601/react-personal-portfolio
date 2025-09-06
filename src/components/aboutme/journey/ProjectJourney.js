@@ -7,23 +7,14 @@ import {
 import { Link } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import JavascriptIcon from "@mui/icons-material/Javascript";
-import CssIcon from "@mui/icons-material/Css";
-import HtmlIcon from "@mui/icons-material/Html";
-import CodeIcon from "@mui/icons-material/Code";
+
 
 const projects = [
-  { title: "Shoppy Ecommerce Website", icon: <JavascriptIcon /> },
-  { title: "Amazing Meal System", icon: <JavascriptIcon /> },
-  { title: "Academia Learning Website", icon: <JavascriptIcon /> },
   { title: "Personal Portfolio", icon: <JavascriptIcon /> },
-  { title: "Online Payroll Management System", icon: <CssIcon /> },
-  { title: "New Year Countdown", icon: <HtmlIcon /> },
-  { title: "Heart Disease Prediction", icon: <CodeIcon /> },
-  { title: "Dual Mode Calendar", icon: <CssIcon /> },
-  { title: "Dual Mode Calculator", icon: <CssIcon /> },
-  { title: "Digital Clock", icon: <CssIcon /> },
-  { title: "Age Calculator", icon: <JavascriptIcon /> },
-  { title: "Student Information Management System", icon: <CodeIcon /> },
+  { title: "Building Pro", icon: <JavascriptIcon /> },
+  { title: "Cinemapro", icon: <JavascriptIcon /> },
+  { title: "Lokmanya", icon: <JavascriptIcon /> },
+  { title: "Harvest & Co.", icon: <JavascriptIcon /> },
 ];
 
 function ProjectJourney() {

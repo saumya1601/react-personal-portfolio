@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ucsc from "../../images/ucsc.png";
-import ufm from "../../images/ufm.png";
-import cbta from "../../images/CBT&A.pdf";
 import Particle from "../../Particle";
-import { motion } from "framer-motion"; // Importing motion for animation
+import { motion } from "framer-motion"; 
 
 // Certificate data
 const certificates = [

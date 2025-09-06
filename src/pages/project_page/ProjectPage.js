@@ -3,17 +3,12 @@ import { motion } from "framer-motion";
 import Particle from "../../Particle";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaCode } from "react-icons/fa";
-import nyc from "../../images/nyc.png";
-import ci from "../../images/onboarding.png";
-import eco from "../../images/eco.png";
-import pp from "../../images/portfolio.png";
-import meal from "../../images/meal.png";
-import ac from "../../images/academic.png";
-import age from "../../images/age.png";
-import calculator from "../../images/calculator.png";
-import calendar from "../../images/calendar.png";
-import dc from "../../images/dc.png";
 
+import pp from "../../images/portfolio.png";
+import buildingProImage from "../../images/BuildingPro.png";
+import cinemaProImage from "../../images/CinemaPro.png";
+import lokManyaImage from "../../images/LokManya.png";
+import harvestAndCoImage from "../../images/harvestandco.png";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -72,22 +67,49 @@ const ProjectCard = ({ project }) => {
 };
 
 const projects = [
-
-
   {
     title: "Personal Portfolio",
     image: pp,
     github: "https://github.com/saumya1601/react-personal-portfolio",
-    description: "Welcome to my personal portfolio. Explore my work, skills, and achievements in a concise and visually appealing format. Get a glimpse of my expertise and creativity.",
-    technologies: "HTML, CSS, SCSS, React, JavaScript"
+    description:
+      "Welcome to my personal portfolio. Explore my work, skills, and achievements in a concise and visually appealing format. Get a glimpse of my expertise and creativity.",
+    technologies: "HTML, CSS, SCSS, React, JavaScript",
   },
-
-
+  {
+    title: "Building Pro",
+    image: buildingProImage,
+    github: "https://buildingpro.in/",
+    description:
+      "A full-stack platform simplifying commercial space management. Connects admins, owners, and visitors with multi-role access, rental/sale workflows, real-time inquiries, billing, and ad management for efficient operations.",
+    technologies: "React.js, MUI, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, AWS, Socket.io, JWT, Google OAuth, Cloudinary, Kafka, Redis, Razorpay",
+  },
+  {
+    title: "Cinemapro",
+    image: cinemaProImage,
+    github: "https://github.com/saumya1601/react-personal-portfolio",
+    description:
+      "A comprehensive platform for the cinema and film industry, providing robust project management, a dynamic vendor marketplace with billing, user/profile management, and job postings for seamless industry collaboration.",
+    technologies: "React.js, Node.js, Express.js, MongoDB, AWS, Socket.io",
+  },
+  {
+    title: "Lokmanya",
+    image: lokManyaImage,
+    github: "https://www.lokmanya.ac.in/",
+    description:
+      "A college website providing information about courses, admissions, faculty, and campus life, designed for prospective and current students, and academic staff.",
+    technologies: "HTML, CSS, JavaScript, React.js",
+  },
+  {
+    title: "Harvest & Co.",
+    image: harvestAndCoImage,
+    github: "https://www.harvestandco.in/",
+    description:
+      "An e-commerce platform for raw herbal products, featuring product listings, secure payment gateways, user accounts, and order management, promoting natural and organic goods.",
+    technologies: "HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB",
+  },
 ];
 
 export default function ProjectPage() {
-
-
   return (
     <section className="home-section">
       <Container fluid id="home">
